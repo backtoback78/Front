@@ -1,0 +1,452 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+/* blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+} */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* reset perso */ 
+body, body *{
+	/* explique au navigateur comment appliquer la width :
+	content-box : la largeur s'applique au contenu
+	padding-box : la largeur s'applique au contenu+espace intérieur
+	border-box : la largeur s'applique jusqu'aux bords de la boîte
+	*/
+	 -webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		     box-sizing: border-box;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+/* fin du reset perso */
+
+/*Typo*/
+@font-face {
+    font-family: 'LatoRegular';
+    src: url('fonts/Lato-Reg-webfont.eot');
+    src: url('fonts/Lato-Reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Lato-Reg-webfont.woff') format('woff'),
+         url('fonts/Lato-Reg-webfont.ttf') format('truetype'),
+         url('fonts/Lato-Reg-webfont.svg#LatoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'galetteregular';
+    src: url('fonts/galette-med-webfont.eot');
+    src: url('fonts/galette-med-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/galette-med-webfont.woff') format('woff'),
+         url('fonts/galette-med-webfont.ttf') format('truetype'),
+         url('fonts/galette-med-webfont.svg#galetteregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Style général */
+body{
+	background-color: #FF7260;
+	font-family: 'LatoRegular', sans-serif;
+	font-size: 0.69rem;/*  11px dans un contexte de 16px */
+	color: #4A4A49;
+}
+
+h1,h2,h4,h5,h6,blockquote, #primary-nav{
+	font-family: 'galetteregular', sans-serif;
+
+}
+h1,h2,h3,h4,h5,h6{
+	text-transform: uppercase;
+	letter-spacing: -0.025em;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.65);
+
+}
+.wrapper{
+	background-color: #fff;
+	margin: 0 auto;
+	/* 1000px dans 1260px en % : 1000/1260*100 ; */
+	width : 1000px;
+	padding: 0 48px 0 48px; 
+}
+header{
+	text-align: right;
+	/* gestion du débordement des flottants*/
+	overflow: hidden;
+	padding-bottom: 27px;
+}
+h1{
+	float: left;
+	margin-top: 38px;
+	position: relative;
+	bottom: 5px;
+}
+h1 a{
+	background-image: url(theme/logo.png);
+	width: 85px;
+	height: 97px;
+	display: block;
+}
+h1 a:hover{
+	background-position: 87.5px 0;
+}
+/* accessibilité : screen reader only*/
+.sr-only{
+	position: absolute;
+	top: -900px;
+}
+
+#secondary-nav ul,
+#primary-nav ul{
+	display: flex;
+	justify-content: flex-end;
+}
+header li{
+	margin-left: 15px;
+}
+#secondary-nav a{
+	display: block;
+	height: 2.38rem; /* 38px */
+	width: 82px;
+	background-color: #FF7260;
+	text-align: center;
+	color: #fff;
+	line-height: 2.63;
+
+	transition: all 1s;
+}
+#secondary-nav a:hover,
+#secondary-nav a:active,
+#secondary-nav a:focus
+{
+	background-color: #cacaca;
+}
+
+#primary-nav{
+	margin-top: 4.06rem;/*  65px */
+	font-size: 1.13rem; /* 18px */
+ }
+#primary-nav a{
+	border-bottom: 1px solid #4b4a49;
+	width: 82px;
+	display: block;
+	padding-bottom: 0.25rem;
+}
+#primary-nav a:hover{
+	color: #FF7260;
+	border-color: #FF7260;
+}
+
+main{
+	text-align: center;
+}
+
+main blockquote{
+	font-size: 2.06rem;
+	border-top: 1px solid #cacaca;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	line-height: 47px;
+}
+
+h2{
+	font-size: 30px;
+	position: relative;
+	background-color: white;
+	display: inline;
+	bottom: 15px;
+}
+
+h2 span{
+	font-size: 17px;
+	text-transform: lowercase;
+	position: absolute;
+	top: -20px;
+	left: 36px;
+}
+
+h2::before,
+h2::after{
+	background-image: url(theme/separateur.png);
+	background-repeat: no-repeat;
+	content: '';
+	width: 35px;
+	height: 25px;
+	display: inline-block;
+}
+
+h2::after{
+	background-position: -40px 0;
+}
+
+section{
+	border-top: 1px solid #cacaca;
+	margin-bottom: 70px;
+}
+
+.flexcontainer{
+	display: flex;
+	flex-wrap: wrap; 
+	justify-content: space-between;
+	padding-top: 32px;
+}
+
+h3{
+	margin-bottom:14px;
+	font-size: 14px;
+	text-shadow: none;
+}
+article{
+	text-align: left;
+}
+article img{
+	width: 270px;
+}
+article:nth-child(2), article:nth-child(5){
+	border-left: 1px solid #cacaca;
+	border-right: 1px solid #cacaca;
+	padding: 0 25px;
+}
+
+article:nth-child(1) figcaption,
+article:nth-child(2) figcaption,
+article:nth-child(3) figcaption{
+	border-bottom: 1px solid #cacaca;
+	padding-bottom: 14px;
+	margin-bottom:14px;
+}
+figcaption{
+	margin-top:14px;
+}
+strong{
+	background-color: #cacaca;
+	padding: 4px;
+	color:white;
+	margin-right:4px;
+	display: inline-block;
+}
+
+#project article a{
+	background-repeat: no-repeat;
+	width: 270px;
+	height: 153px;
+	display: block;
+	position: relative; /* repère pour positionner la pastille*/
+	overflow: hidden;
+}
+ #project article figure:hover img{
+	display: none;
+} 
+#project article:first-child a{
+	background-image: url(../img/Exam-IMG-1.png);
+}
+#project article:nth-child(2) a{
+	background-image: url(../img/Exam-IMG-3.png);
+}
+#project article:nth-child(3) a{
+	background-image: url(../img/Exam-IMG-2.png);
+}
+#project article:nth-child(4) a{
+	background-image: url(../img/Exam-IMG-4.png);
+}
+#project article:nth-child(5) a{
+	background-image: url(../img/Exam-IMG-5.png);
+}
+#project article:nth-child(6) a{
+	background-image: url(../img/Exam-IMG-6.png);
+}
+
+
+/* Pastille MORE */
+#project figure a::after{
+	content: 'more';
+	width: 98px;
+	height: 98px;
+	display: block;
+	background-color: #FF7260;
+	position: absolute;
+	top: 100%;
+	/* 1re technique */
+	/* left: 0;
+	right: 0;
+	margin: 0 auto; */
+	/* */
+	/* 2e technique : */
+	left:50%;
+	transform: translateX(-50%);
+	/* */
+	border-radius: 50%;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 98px;
+	transition: top 0.4s;
+}
+ #project figure:hover a::after{
+	top: 28px;
+} 
+
+
+/* Section Fresh news */
+#news{
+	width: 67.8%;
+}
+#news article{
+	width: 50%;
+}
+#news h4{
+	font-size: 1.1rem;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-transform: none;
+}
+#news p{
+	line-height: 0.94rem;
+}
+q::before,
+q::after{
+	content:'"';
+}
+
+
+/* section flickr */
+#flickr{
+	width: 29.7%;
+}
+
+#flickr ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 34px;
+}
+
+#flickr li:nth-child(1),
+#flickr li:nth-child(2),
+#flickr li:nth-child(3){
+	margin-bottom: 10px;
+}
+
+footer{
+	background-color: #4a4a49;
+	color: white;
+	padding-top: 49px;
+	text-align: center;
+}
+footer h6, em{
+	color: #ff7260;
+}
+footer h5{
+	font-size: 2.06rem;
+	display: inline-block;
+	position: relative;
+	margin-bottom: 15px;
+}
+footer h5::before,
+footer h5::after{
+	font-size:5.5rem;
+	text-shadow: none;
+	position: absolute;
+	top: -15px;
+}
+footer h5::before{
+	content:"[";
+	left: -35px;
+}
+footer h5::after{
+	content:"]";
+	right: -35px;
+}
+footer h5 span{
+	display: block;
+	transform: scaleY(1.8)
+}
+footer h6{
+	font-size: 0.81rem;
+	margin-bottom: 20px;
+}
+footer p {
+
+}
+.accroche{
+	font-size: 1.13rem;
+	margin-bottom: 30px;
+}
+
+footer section{
+	border: 1px dotted #fff;
+	padding: 35px 28px 25px;
+	width: 30%;
+	border-left-color: transparent; 
+	text-align: left;
+	line-height: 1rem;
+
+}
+ 
+footer section:first-child{
+	width: 40%;
+	border-left-color: #fff;
+	display: flex;
+	align-items: flex-start;
+}
+footer section:nth-child(3){
+	text-align: center;
+}
+.cadre{
+	width: 666px;
+	margin: 0 auto;
+}
+footer div{
+	padding: 0 20px;
+}
+footer div:nth-child(2){
+	border-left : 1px dotted #fff;
+}
+footer section:nth-child(3) ul{
+	display: flex;
+	justify-content: space-around;
+}
