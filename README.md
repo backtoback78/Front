@@ -7,24 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## Installation
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+## Technologie
 
 - Technologie utilisée: html, css, jquery
-
-
-If you are this message: [Illuminate\Database\QueryException]
-SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; 
-
-you need to place this code in your AppServiceProvider.php because you are using MariaDB or an older version of MySQL:
-
-use Illuminate\Support\Facades\Schema;
-
-public function boot()
-{
-    Schema::defaultStringLength(191);
-}
 
 
 ## Contributing
