@@ -1,4 +1,4 @@
-<p align="center">Projet d'intégration effectué durant mes études à l'école multimédia</p>
+<h2 align="center">Projet d'intégration effectué durant mes études à l'école multimédia</h2>
 
 
 
